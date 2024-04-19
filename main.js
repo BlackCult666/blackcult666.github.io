@@ -4,18 +4,24 @@ const sectionBalls = document.querySelectorAll('.section__ball');
 
 
 sectionBalls.forEach(ball => {
+
+    let isClicked = false;
     
     const handleMouseEnter = () => {
-        const hoveredId = ball.id;
-        sectionBalls.forEach(otherBall => {
-            if (otherBall.id !== hoveredId) {
-                if (otherBall.id === 'photo' || otherBall.id === 'about') {
-                    otherBall.classList.add('hideToLeft');
-                } else {
-                    otherBall.classList.add('hideToRight');
+        if(!isClicked) {
+            isClicked = true;
+            
+            const hoveredId = ball.id;
+            sectionBalls.forEach(otherBall => {
+                if (otherBall.id !== hoveredId) {
+                    if (otherBall.id === 'photo' || otherBall.id === 'about') {
+                        otherBall.classList.add('hideToLeft');
+                    } else {
+                        otherBall.classList.add('hideToRight');
+                    }
                 }
-            }
-        });
+            });
+        }
     };
 
     const handleMouseExit = () => {
