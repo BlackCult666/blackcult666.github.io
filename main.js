@@ -5,7 +5,7 @@ const sectionBalls = document.querySelectorAll('.section__ball');
 
 sectionBalls.forEach(ball => {
     
-    ball.addEventListener('mouseenter', () => {
+    const handleMouseEnter = () => {
         const hoveredId = ball.id;
         sectionBalls.forEach(otherBall => {
             if (otherBall.id !== hoveredId) {
@@ -16,13 +16,20 @@ sectionBalls.forEach(ball => {
                 }
             }
         });
-    });
+    };
 
-    ball.addEventListener('mouseleave', () => {
+    const handleMouseExit = () => {
         sectionBalls.forEach(otherBall => {
             otherBall.classList.remove('hideToRight');
             otherBall.classList.remove('hideToLeft');
         });
+    }
+
+    ball.addEventListener('mouseenter', handleMouseEnter);
+    ball.addEventListener('mouseleave', handleMouseExit);
+
+    ball.addEventListener('click', () => {
+        handleMouseEnter();
     });
 });
 
