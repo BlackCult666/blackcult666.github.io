@@ -4,7 +4,6 @@ const draggableCircle = document.querySelector(".draggable__circle");
 let offsetX, offsetY;
 
 const move = (e) => {
-    e.preventDefault(); 
     let posX, posY;
     if (e.type === "touchmove") {
         posX = e.touches[0].clientX;
@@ -21,7 +20,6 @@ draggableCircle.addEventListener("mousedown", startDrag);
 draggableCircle.addEventListener("touchstart", startDrag);
 
 function startDrag(e) {
-    e.preventDefault();
     offsetX = e.clientX - draggableCircle.offsetLeft;
     offsetY = e.clientY - draggableCircle.offsetTop;
 
