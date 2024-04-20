@@ -7,7 +7,7 @@ draggableCircle.addEventListener("mousedown", startDrag);
 draggableCircle.addEventListener("touchstart", startDrag);
 
 function startDrag(e) {
-    e.preventDefault(); // Evita il comportamento predefinito del browser
+    e.preventDefault();
 
     const event = e.type === "touchstart" ? e.touches[0] : e;
 
@@ -21,7 +21,7 @@ function startDrag(e) {
 }
 
 function move(e) {
-    e.preventDefault(); // Evita il comportamento predefinito del browser
+    e.preventDefault();
 
     const event = e.type === "touchmove" ? e.touches[0] : e;
 
@@ -30,6 +30,24 @@ function move(e) {
 
     draggableCircle.style.left = `${posX}px`;
     draggableCircle.style.top = `${posY}px`;
+
+    const draggableRect = draggableCircle.getBoundingClientRect();
+    const sectionBalls = document.querySelectorAll('.section__ball');
+    
+    sectionBalls.forEach(ball => {
+        const ballRect = ball.getBoundingClientRect();
+        if (
+            draggableRect.right >= ballRect.left &&
+            draggableRect.left <= ballRect.right &&
+            draggableRect.bottom >= ballRect.top &&
+            draggableRect.top <= ballRect.bottom 
+        ) {
+            ball.classList.add('selected'); // Aggiungi la classe 'collision' alla .section__ball
+        } else {
+            ball.classList.remove('selected'); // Rimuovi la classe 'collision' se non c'è una collisione
+
+        }
+    });
 }
 
 function endDrag() {
@@ -41,7 +59,7 @@ function endDrag() {
 
 
 
-const sectionBalls = document.querySelectorAll('.section__ball');
+/*const sectionBalls = document.querySelectorAll('.section__ball');
 
 
 sectionBalls.forEach(ball => {
@@ -70,3 +88,4 @@ sectionBalls.forEach(ball => {
     ball.addEventListener('mouseenter', handleMouseEnter);
     ball.addEventListener('mouseleave', handleMouseExit);
 });
+*/

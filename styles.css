@@ -36,8 +36,15 @@ nav {
     text-align: center;
     text-transform: uppercase;
     margin: 6px 10px;
-    transition: all 0.5s ease-out; 
+    transition: all 0.2s ease-out; 
 }
+
+.section__ball.selected {
+    width: 96px;
+    height: 96px;
+    background-color: #000;
+}
+
 
 #about {
     top: 0;
