@@ -67,27 +67,3 @@ sectionBalls.forEach(ball => {
     ball.addEventListener('mouseenter', handleMouseEnter);
     ball.addEventListener('mouseleave', handleMouseExit);
 });
-
-/*sectionBalls.forEach(ball => {
-    ball.addEventListener('mouseover', () => {
-        // Nascondi tutte le altre sezioni
-        sectionBalls.forEach(otherBall => {
-            if (otherBall !== ball) {
-                otherBall.style.display = 'none';
-            }
-        });
-        // Visualizza la "cosa" desiderata, sostituisci "cosa" con il tuo elemento
-        // Esempio:
-        // document.getElementById('elemento-da-mostrare').style.display = 'block';
-    });
-
-    ball.addEventListener('mouseout', () => {
-        // Mostra tutte le altre sezioni quando esce l'hover
-        sectionBalls.forEach(otherBall => {
-            otherBall.style.display = 'flex';
-        });
-        // Nascondi la "cosa" quando esce l'hover, sostituisci "cosa" con il tuo elemento
-        // Esempio:
-        // document.getElementById('elemento-da-mostrare').style.display = 'none';
-    });
-});*/
