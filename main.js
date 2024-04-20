@@ -33,10 +33,6 @@ sectionBalls.forEach(ball => {
 
     ball.addEventListener('mouseenter', handleMouseEnter);
     ball.addEventListener('mouseleave', handleMouseExit);
-
-    ball.addEventListener('click', () => {
-        handleMouseEnter();
-    });
 });
 
 /*sectionBalls.forEach(ball => {

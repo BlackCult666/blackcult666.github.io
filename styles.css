@@ -13,6 +13,7 @@ body {
 nav {
     width: 100vw;
     height: 10vh;
+    height: 10svh;
     border-bottom: 1px solid #252525;
 }
 
@@ -20,6 +21,7 @@ nav {
     position: relative;
     width: 100vw;
     height: 90vh;
+    height: 90svh;
 }
 
 .section__ball {
