@@ -106,13 +106,14 @@ nav {
     border-radius: 50%;
 }
 
-.draggable__circle > span {
+.draggable__circle > svg {
+    width: 34px;
+    height: 34px;
     opacity: 0;
     color: #fff;
-    font-size: 30px;
 }
 
-.draggable__circle:hover > span {
+.draggable__circle:hover > svg {
     opacity: 1;
     transition: 0.5s ease-out;
 }
