@@ -1,22 +1,42 @@
 const circleType = new CircleType(document.querySelector(".rotated__section")).radius(50);
+
 const draggableCircle = document.querySelector(".draggable__circle");
 let offsetX, offsetY;
 
 const move = (e) => {
-    draggableCircle.style.left = `${e.clientX - offsetX}px`;
-    draggableCircle.style.top = `${e.clientY - offsetY}px`;
-}
+    e.preventDefault(); 
+    let posX, posY;
+    if (e.type === "touchmove") {
+        posX = e.touches[0].clientX;
+        posY = e.touches[0].clientY;
+    } else {
+        posX = e.clientX;
+        posY = e.clientY;
+    }
+    draggableCircle.style.left = `${posX - offsetX}px`;
+    draggableCircle.style.top = `${posY - offsetY}px`;
+};
 
-draggableCircle.addEventListener("mousedown", (e) => {
+draggableCircle.addEventListener("mousedown", startDrag);
+draggableCircle.addEventListener("touchstart", startDrag);
+
+function startDrag(e) {
+    e.preventDefault();
     offsetX = e.clientX - draggableCircle.offsetLeft;
     offsetY = e.clientY - draggableCircle.offsetTop;
 
     document.addEventListener("mousemove", move);
-});
+    document.addEventListener("mouseup", endDrag);
+    document.addEventListener("touchmove", move);
+    document.addEventListener("touchend", endDrag);
+}
 
-document.addEventListener("mouseup", () => {
+function endDrag() {
     document.removeEventListener("mousemove", move);
-});
+    document.removeEventListener("mouseup", endDrag);
+    document.removeEventListener("touchmove", move);
+    document.removeEventListener("touchend", endDrag);
+}
 
 
 
