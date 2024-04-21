@@ -2,83 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   s <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></head>
 <body>
-   <div class="container">
-        <div class="intro-copy">
-            <p class="intro-paragraph">an + indipendent + young + developer + and + guitarist + based + in + naples +
-        </div>
+    <nav>
+        <div class="nav__wrapper">
+            <span>ALEX</span>
+            
+            <div class="right__nav">
+                <ul class="social__list">
+                    <li class="social__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>                    
+                    </li>
 
-        <div class="headers">
-            <section id="section-1">
-                <h1>Vaccum</h1>
-            </section>
+                    <li class="social__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </li>
 
-            <section id="section-2">
-                <h1>Ember</h1>
-            </section>
-
-            <section id="section-3">
-                <h1>Scratch</h1>
-            </section>
-
-            <section id="section-4">
-                <h1>Azure</h1>
-            </section>
-
-            <section id="section-5">
-                <h1>Synthesis</h1>
-            </section>
-
-            <section id="section-6">
-                <h1>Euphoria</h1>
-            </section>
-
-            <section id="section-7">
-                <h1>The End</h1>
-            </section>
-            <div class="spacer"></div>
-        </div>
-
-        <div class="section-previews">
-            <div class="img" id="preview-1">
-                <img src="assets/img_1.jpg" alt="">
-            </div>
-
-            <div class="img" id="preview-2">
-                <img src="assets/img_2.jpg" alt="">
-            </div>
-
-            <div class="img" id="preview-3">
-                <img src="assets/img_3.jpg" alt="">
-            </div>
-
-            <div class="img" id="preview-4">
-                <img src="assets/img_4.jpg" alt="">
-            </div>
-
-            <div class="img" id="preview-5">
-                <img src="assets/img_5.jpg" alt="">
-            </div>
-
-            <div class="img" id="preview-6">
-                <img src="assets/img_6.jpg" alt="">
-            </div>
-
-            <div class="img" id="preview-7">
-                <img src="assets/img_7.jpg" alt="">
+                    <li class="social__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>              
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <p class="hamb__line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                </div>
             </div>
         </div>
-   </div>
+    </nav>
 
+    <div class="content__overlay">
+        <div class="nav__links">
+            <div class="nav__link">
+                <span>(01)</span>
+                <a href="#">HOME</a>
+            </div>
 
+            <div class="nav__link">
+                <span>(02)</span>
+                <a href="#">OUR STUDIO</a>
+            </div>
+
+            <div class="nav__link">
+                <span>(03)</span>
+                <a href="#">PROJECTS</a>
+            </div>
+
+            <div class="nav__link">
+                <span>(04)</span>
+                <a href="#">COMMUNITY</a>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
